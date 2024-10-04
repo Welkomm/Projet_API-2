@@ -1,0 +1,241 @@
+/* ProductList.css */
+
+.product-list-container {
+    display: flex;
+    flex-direction: column; /* Keep the column layout for overall alignment */
+    align-items: center; /* Center items horizontally */
+    padding: 10px; /* Adjust as needed */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.search-bar-container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center; /* Center the items */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.back-to-home-button {
+    position: absolute;
+    left: 100px; /* Adjust based on your preference */
+}
+
+/* This additional container is for centering the search bar */
+.search-bar-wrapper {
+    flex-grow: 1;
+}
+
+/* Use a grid layout for the products */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 columns of equal width */
+    gap: 20px; /* Adjust the gap between grid items */
+    width: 100%; /* Adjust based on your preference */
+    max-width: 1200px; /* Maximum width of the grid */
+    align-items: start; /* Align items at the start of each cell */
+    padding: 20px; /* Adjust as needed */
+    margin-top: 20px; /* Space between search bar and grid */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 160px); /* Adjust this value based on your header/search bar height */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
+}
+
+.product-item {
+    /* Adjustments for individual product items */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    /* Add any additional styling here */
+}
+
+.back-to-home-button {
+    /* Styling for the "Back to Home" button */
+    background-color: #007bff; /* Adjust color to match your theme */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: auto; /* Keeps the button on the left */
+}
+
+.back-to-home-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.product-title {
+    font-size: 18px;
+    color: #333; /* Text color for readability */
+}
+
+.view-details-button, .add-to-cart-button, .back-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: white;
+    background-color: #007bff; /* Button color consistent with theme */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-button:hover, .add-to-cart-button:hover, .back-button:hover {
+    background-color: #0056b3; /* Hover effect consistent with theme */
+}
+
+.product-image {
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and product title */
+}
+
+.product-details {
+    display: flex;
+    align-items: start; /* Align items at the start of the flex container */
+    gap: 20px; /* Adjust the gap between the image and the text/buttons as needed */
+    padding: 20px; /* Add some padding around the details for better spacing */
+}
+
+.product-image-large {
+    flex: 1; /* Allows the image to grow and take up space, adjust as needed */
+    max-width: 50%; /* Limits the image width, adjust based on your design */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.product-info {
+    flex: 2; /* Allows the text and buttons to take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap between text/buttons as needed */
+}
+.product-image-large {
+    width: 100%; /* Keep it responsive, but you might want to set a max-width */
+    max-width: 800px; /* Adjust this value based on your layout */
+    height: 700px; /* Increased height */
+    object-fit: cover; /* This will cover the area without distorting the image */
+    border-radius: 4px; /* Optional: Adds rounded corners to the image */
+    margin: auto; /* Center the image if it's not filling the entire width of its container */
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    width: 100%; /* Ensure it spans the full width of its parent */
+}
+
+.similar-products-container {
+    margin-top: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    white-space: nowrap;
+    padding: 20px 0;
+    width: 90%; /* Adjust based on your layout, ensures it doesn't overflow */
+    max-width: 1200px; /* Maximum width can be adjusted */
+    box-sizing: border-box; /* Includes padding and border in the element's total width */
+}
+
+.similar-product-item {
+    display: inline-block;
+    width: 175px; /* Adjust width as needed */
+    margin-right: 20px;
+    vertical-align: top;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.similar-product-item img {
+    width: 100%;
+    height: auto;
+}
+
+.similar-product-item div {
+    padding: 10px;
+    overflow: visible; /* Change to visible to allow text to wrap */
+    text-overflow: clip; /* Change to clip since we're now wrapping text */
+    white-space: normal; /* Allow the text to wrap to the next line */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60px; /* Adjust height as needed to fit both lines */
+  }
+
+.cart-button {
+    /* Styling for the "Cart" button */
+    position: absolute;
+    right: 100px; /* Adjust based on your preference */
+    background-color: #007bff; /* Adjust color to match your theme */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto; /* Keeps the button on the left */
+}
+
+.cart-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.rating-container {
+    margin-top: 20px;
+}
+
+.rating-stars {
+    display: inline-block;
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating-stars .star {
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.rating-stars .star.filled {
+    color: #f8ce0b;
+}
+.rating-container button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.rating-container button:hover {
+    background-color: #0056b3;
+}
+
+.average-rating {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.out-of-stock-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.add-to-cart-button.disabled {
+    background-color: #ccc !important;
+    color: #666 !important;
+    cursor: not-allowed !important;
+}

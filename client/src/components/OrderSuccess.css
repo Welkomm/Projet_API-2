@@ -1,0 +1,15 @@
+.order-success-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Assurez-vous que le message est visible */
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.order-success-title {
+    color: #4CAF50; /* Vert pour le succès */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
